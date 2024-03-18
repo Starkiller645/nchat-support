@@ -55,18 +55,18 @@ I will research two different pieces of software, both well-established internet
 Discord is an internet messaging application first released in 2015 and aimed at the online videogaming market. The developers wanted to create an easy-to-use VoIP and chat software to facilitate communication in online videogames such as *League of Legends* and *Final Fantasy*.
 The main interface of Discord is presented as two sidebars with a main content area and optional popout drawer on the right of the screen, as well as a header bar containing information about the current chat. Users can message up to 10 people via direct message, or may join 'servers' which are communities of users operating around a central topic, with multiple separate text and voice 'channels' - NChat will use a similar system of 'hubs' and 'channels'. Discord includes robust support for image- and file-sharing, as well as real-time streaming of users' desktops or individual applications. Discord may be accessed from the desktop application, iOS and Android apps or a compatible web browser.
 Below are annotated screen captures of the Discord desktop application:
-[Main Screen](static/dc-mainscreen.png)
-[Server](static/dc-server.png)
-[Direct Messages](static/dc-directmessage.png)
-[Login Page](static/dc-loginpage.png)
+![Main Screen](static/dc-mainscreen.png)
+![Server](static/dc-server.png)
+![Direct Messages](static/dc-directmessage.png)
+![Login Page](static/dc-loginpage.png)
 
 ### HexChat
 HexChat is a client for the Internet Relay Chat (IRC) protocol, released in 2010, although it is a fork of a project called XChat which has been around for longer. In contrast to Discord, HexChat was designed around familiarity with old, console-based IRC clients. This has meant that it is much less approachable and intuitive, but the interface is far simpler and less cluttered.
 As IRC was developed before GUIs became mainstream, much of the user interaction is done via commands typed in the input box, prefixed with a slash. It could be worth implementing this as a shortcut mechanism in NChat - as part of my interview I will pose this question. HexChat's GUI is very simple - a sidebar on each side of the screen, showing servers, channels and users online in the selected channel; a bar at the top showing the channel description, an input box at the bottom, and the rest of the screen area dedicated to the messages sent in the channel. A significant limitation of IRC is that a user must be online to read messages - there is no history functionality easily available. I will of course avoid this limitation in NChat. 
 Below are annotated screen captures:
-[Main Screen](static/hc-mainscreen.png)
-[Server Listing](static/hc-serverlisting.png)
-[Login Page](static/hc-login)
+![Main Screen](static/hc-mainscreen.png)
+![Server Listing](static/hc-serverlisting.png)
+![Login Page](static/hc-login)
 
 ### Interview
 
