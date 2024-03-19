@@ -46,7 +46,8 @@ NChat will be designed to be fully asynchronous from the start in both the clien
     - file access and other utilities such as thread-safe mutexes and pointers are provided by the Tokio library which is fully asynchronous
 
 ## Stakeholders
-`todo!()`
+This project will primarily be aimed at players of online videogames, therefore the target age range will be approximately 16-25. I will design NChat to be intuitive and easy-to-use, allowing new users to quickly learn how to use it, while also allowing for power-user features such as fast keyboard shortcuts and a global command bar inspired by IRC slash commands. This will allow users of all levels of familiarity with NChat to use it efficiently. Initially, I will release NChat for the desktop platform only. I will use the cross-platform GUI framework Dioxus to allow it to run on Windows, MacOS and Linux without significant code changes, which will allow the greatest number of users to use NChat at launch, and also allow me to develop on Linux which significantly reduces development time due to the OS's better support for the Rust compiler and development toolchains in general.
+I have selected a user to represent my target audience, Amelia Quinlivan. She is a student at my sixth form who makes extensive use of Discord, as well as other online chat platforms, to message her friends over the internet. Therefore, she will have a good working knowledge of required features in chat clients, as well as an understanding of the limitations of platforms such as Discord which can be addressed in NChat. As part of my research, I will conduct an interview with her to establish basic requirements for the NChat client software, as well as any 'nice-to-have' features which may be added if there is sufficient time.
 
 ## Research
 I will research two different pieces of software, both well-established internet chat applications: Discord, which is a contemporary online messaging platform used primarily by the online videogame community, and HexChat, which is a client for the Internet Relay Chat messaging protocol which was introduced in 1988 and continues to be used, mostly by developers. Additionally, I will conduct an interview with my representative stakeholder, which will allow me to better understand the requirements of the target market for NChat.
@@ -54,8 +55,8 @@ I will research two different pieces of software, both well-established internet
 ### Discord
 Discord is an internet messaging application first released in 2015 and aimed at the online videogaming market. The developers wanted to create an easy-to-use VoIP and chat software to facilitate communication in online videogames such as *League of Legends* and *Final Fantasy*.
 The main interface of Discord is presented as two sidebars with a main content area and optional popout drawer on the right of the screen, as well as a header bar containing information about the current chat. Users can message up to 10 people via direct message, or may join 'servers' which are communities of users operating around a central topic, with multiple separate text and voice 'channels' - NChat will use a similar system of 'hubs' and 'channels'. Discord includes robust support for image- and file-sharing, as well as real-time streaming of users' desktops or individual applications. Discord may be accessed from the desktop application, iOS and Android apps or a compatible web browser.
+Discord uses the same client-server architecture that NChat will, but unlike NChat uses a principle known as 'Eventual Consistency' - this requires, as the name suggests, that data eventually becomes consistent across all clients and the server, but does *not* guarantee consistency at the time of a data update; this can lead to clients becoming desynchronised and/or messages failing to send, a problem I have experienced first-hand and one that will be solved in NChat through the use of an authoritative server state. Data storage, for client settings and preferences in addition to messages, is almost entirely cloud-based - in NChat I will make minimal use of cloud storage which reduces the need for data protection and also reduces implementation complexity, but will mean the majority of user settings are not synced between devices.
 Below are annotated screen captures of the Discord desktop application:
-![Main Screen](static/dc-mainscreen.png)
 ![Server](static/dc-server.png)
 ![Direct Messages](static/dc-directmessage.png)
 ![Login Page](static/dc-loginpage.png)
@@ -65,25 +66,8 @@ HexChat is a client for the Internet Relay Chat (IRC) protocol, released in 2010
 As IRC was developed before GUIs became mainstream, much of the user interaction is done via commands typed in the input box, prefixed with a slash. It could be worth implementing this as a shortcut mechanism in NChat - as part of my interview I will pose this question. HexChat's GUI is very simple - a sidebar on each side of the screen, showing servers, channels and users online in the selected channel; a bar at the top showing the channel description, an input box at the bottom, and the rest of the screen area dedicated to the messages sent in the channel. A significant limitation of IRC is that a user must be online to read messages - there is no history functionality easily available. I will of course avoid this limitation in NChat. 
 Below are annotated screen captures:
 ![Main Screen](static/hc-mainscreen.png)
-![Server Listing](static/hc-serverlisting.png)
-![Login Page](static/hc-login)
+![Server Listing and Login Page](static/hc-serverlist.png)
 
 ### Interview
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
